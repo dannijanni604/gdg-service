@@ -1,4 +1,4 @@
-# gdg_service
+# gdd_service
 
 A new Flutter project.
 

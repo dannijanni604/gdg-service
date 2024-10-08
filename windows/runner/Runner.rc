@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "gdg_service" "\0"
+            VALUE "FileDescription", "gdd_service" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "gdg_service" "\0"
+            VALUE "InternalName", "gdd_service" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "gdg_service.exe" "\0"
-            VALUE "ProductName", "gdg_service" "\0"
+            VALUE "OriginalFilename", "gdd_service.exe" "\0"
+            VALUE "ProductName", "gdd_service" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

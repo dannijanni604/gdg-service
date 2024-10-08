@@ -1,6 +1,6 @@
 {
-    "name": "gdg_service",
-    "short_name": "gdg_service",
+    "name": "gdd_service",
+    "short_name": "gdd_service",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
