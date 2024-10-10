@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screen_recording/flutter_screen_recording.dart';
 import 'package:quiver/async.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:open_file/open_file.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -25,11 +26,6 @@ class _MyAppState extends State<MyApp> {
     if (await Permission.microphone.request().isDenied) {
       await Permission.microphone.request();
     }
-    // await PermissionHandler().requestPermissions([
-    //   PermissionGroup.storage,
-    //   PermissionGroup.photos,
-    //   PermissionGroup.microphone,
-    // ]);
   }
 
   @override
@@ -117,6 +113,6 @@ class _MyAppState extends State<MyApp> {
     });
     print("Opening video");
     print(path);
-    OpenFile.open(path);
+    // OpenFile.open(path);
   }
 }
