@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screen_recording/flutter_screen_recording.dart';
-import 'package:gdd_service/google_services.dart';
+import 'package:gdd_service/upload_compressed_video.dart';
 import 'package:quiver/async.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -103,15 +103,12 @@ class _MyAppState extends State<MyApp> {
     }
     return start;
   }
-
   stopScreenRecord() async {
     String path = await FlutterScreenRecording.stopRecordScreen;
     setState(() {
       recording = !recording;
     });
-    print("Recording saved at: $path");
-
-    GoogleDriveService driveService = GoogleDriveService();
-    await driveService.uploadFileToDrive(path);
+    uploadCompressedVideo(path);
   }
 }
+
