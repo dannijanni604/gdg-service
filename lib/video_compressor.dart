@@ -17,9 +17,7 @@ Future<MediaInfo?> compressVideo(String filePath) async {
     String newFilePath = path.join(dir, fileName);
     File compressedFile = File(compressedVideo.path!);
     compressedFile = await compressedFile.rename(newFilePath);
-    print("Compressed video saved at: $newFilePath");
-print(compressedVideo.filesize);
-    return MediaInfo(path: newFilePath, duration: compressedVideo.duration, filesize:  compressedVideo.filesize);
+    return MediaInfo(path: newFilePath, duration: compressedVideo.duration, filesize: compressedVideo.filesize);
   }
   return null;
 }

@@ -10,7 +10,6 @@ class GoogleDriveService {
   final String _credentialsFile = dotenv.env['GCSAK_PATH']!;
   final String _folder = dotenv.env['GCDF_PATH']!;
 
-
   Future<http.Client> _getAuthClient() async {
     String credentials = await rootBundle.loadString(_credentialsFile);
     final Map<String, dynamic> key = jsonDecode(credentials);
