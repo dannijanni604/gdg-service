@@ -1,9 +1,6 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screen_recording/flutter_screen_recording.dart';
 import 'package:gdd_service/upload_compressed_video.dart';
-import 'package:path_provider/path_provider.dart';
-
 import 'common_functions.dart';
 
 class MainView extends StatefulWidget {
@@ -25,36 +22,12 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Screen Recording'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          !recording
-              ? Center(
-                  child: ElevatedButton(
-                    child: const Text("Record Screen"),
-                    onPressed: () => startScreenRecord(false),
-                  ),
-                )
-              : Container(),
-          !recording
-              ? Center(
-                  child: ElevatedButton(
-                    child: const Text("Record Screen & audio"),
-                    onPressed: () => startScreenRecord(true),
-                  ),
-                )
-              : Center(
-                  child: ElevatedButton(
-                    child: const Text("Stop Record"),
-                    onPressed: () => stopScreenRecord(),
-                  ),
-                )
-        ],
-      ),
-    );
+        body: Column(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+      !recording ? Center(child: ElevatedButton(child: const Text("Record Screen"), onPressed: () => startScreenRecord(false))) : Container(),
+      !recording
+          ? Center(child: ElevatedButton(child: const Text("Record Screen & audio"), onPressed: () => startScreenRecord(true)))
+          : Center(child: ElevatedButton(child: const Text("Stop Record"), onPressed: () => stopScreenRecord()))
+    ]));
   }
 
   startScreenRecord(bool audio) async {
