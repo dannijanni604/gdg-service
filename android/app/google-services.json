@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "616744155888",
+    "project_id": "gdd-service",
+    "storage_bucket": "gdd-service.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616744155888:android:1db28f71bccf51cf206035",
+        "android_client_info": {
+          "package_name": "com.example.gdd_service"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd7g-uQGH8dzHDzWlr3t4IBR_MItUoImw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
