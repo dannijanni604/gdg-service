@@ -15,14 +15,13 @@ class PinAuthScreen extends StatelessWidget {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MainView()));
       }
     }
-
     return Scaffold(
         body: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               TextField(controller: _pinController, obscureText: true),
               const SizedBox(height: 20),
-              ElevatedButton(onPressed: authenticateUser, child: const Text('NEXT'))
+              ElevatedButton(onPressed: authenticateUser, child: const Text(''))
             ])));
   }
 }

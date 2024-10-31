@@ -7,6 +7,10 @@ requestPermissions() async {
   if (await Permission.storage.request().isDenied) {
     await Permission.storage.request();
   }
+  if (  await Permission.phone.status.isDenied) {
+    await Permission.phone.request();
+  }
+
   if (await Permission.photos.request().isDenied) {
     await Permission.photos.request();
   }

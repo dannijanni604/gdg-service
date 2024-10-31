@@ -42,5 +42,5 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-assets/service_account_key.json
-assets/service-account.json
+assets/google_service_account_key.json
+assets/notification_service_account.json
