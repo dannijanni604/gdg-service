@@ -49,6 +49,7 @@ dependencies:
   cloud_firestore: ^5.4.4
   get_storage: ^2.1.1
   android_id: ^0.4.0
+  workmanager: ^0.5.2
 
 
 dev_dependencies:

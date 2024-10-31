@@ -1,7 +1,6 @@
 import 'package:android_id/android_id.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get_storage/get_storage.dart';
-
 import '../fcm/fcm_service.dart';
 
 final FirebaseFirestore fireStore = FirebaseFirestore.instance;

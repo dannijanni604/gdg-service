@@ -1,7 +1,10 @@
 import 'dart:io';
 import 'dart:math';
+import 'package:android_id/android_id.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+
+import '../auth/auth_functions.dart';
 
 requestPermissions() async {
   if (await Permission.storage.request().isDenied) {
@@ -57,4 +60,13 @@ Future<void> deleteVideo(String videoFile) async {
 }
 
 
+
+Future<String> checkUserRoleUsingId()async{
+  String? deviceId = await const AndroidId().getId();
+  String userRole='';
+  if (deviceId != null) {
+    userRole = await getUserRole(deviceId);
+  }
+  return userRole;
+}
 

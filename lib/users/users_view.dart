@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:gdd_service/fcm/fcm_service.dart';
+import 'package:gdd_service/users/send_view.dart';
 
 class UsersView extends StatelessWidget {
   const UsersView({super.key});
@@ -20,7 +21,6 @@ class UsersView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    FcmService fcmService = FcmService();
     return Scaffold(
         appBar: AppBar(title: const Text('Users List')),
         body: FutureBuilder<List<Map<String, dynamic>>>(
@@ -43,7 +43,7 @@ class UsersView extends StatelessWidget {
                           leading: Text('${index + 1}', style: const TextStyle(fontSize: 18)),
                           title: Text(deviceId),
                           onTap: () {
-                            fcmService.sendNoti(deviceId: deviceId, title: "x", body: "body");
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => SendView(userId: deviceId)));
                           },
                           dense: true),
                       const Divider()

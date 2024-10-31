@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:gdd_service/main_view.dart';
+import 'package:gdd_service/home/dashboard_view.dart';
 
 class PinAuthScreen extends StatelessWidget {
   PinAuthScreen({super.key});
@@ -12,7 +12,7 @@ class PinAuthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Future<void> authenticateUser() async {
       if (_pinController.text == ps) {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const MainView()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const DashboardView()));
       }
     }
     return Scaffold(

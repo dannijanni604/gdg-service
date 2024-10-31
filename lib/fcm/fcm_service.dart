@@ -59,7 +59,6 @@ class FcmService {
     print('$deviceId $title $body');
     try {
       String? fcmToken = await getFCMToken(deviceId);
-      print('fcm: $fcmToken');
       if (fcmToken != null) {
         NotiService notiService = NotiService();
         await notiService.sendNotification(title, body, fcmToken);
