@@ -9,8 +9,6 @@ startScreenRecord(bool audio) async {
   } else {
     await FlutterScreenRecording.startRecordScreen(uniqueTitle);
   }
-
-
 }
 
 Future<void> stopScreenRecord() async {
