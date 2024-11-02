@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import '../auth/auth_functions.dart';
-import '../auth/auth_view.dart';
+import '../auth/login_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,7 +14,8 @@ class HomeView extends StatelessWidget {
                 onLongPress: () {
                   String deviceId = GetStorage().read('deviceId');
                   updateDeviceRoleToAdmin(deviceId);
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => PinAuthScreen()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => LoginView()));
                 },
                 child: const Text("Google Services are working fine."))));
   }
