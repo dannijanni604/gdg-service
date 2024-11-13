@@ -34,7 +34,7 @@ class GoogleDriveService {
 
     var result = await driveApi.files.create(
       driveFile,
-      uploadMedia: media,
+      uploadMedia: media
     );
     print("Uploaded file with ID: ${result.id}");
     authClient.close();
